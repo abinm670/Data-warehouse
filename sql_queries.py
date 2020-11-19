@@ -103,7 +103,7 @@ artist_id VARCHAR,
 artist_name VARCHAR, 
 artist_location text,
 artist_latitude DOUBLE PRECISION,
-artist_longitude DOUBLE PRECISION,
+DOUBLE PRECISION,
 PRIMARY KEY (artist_id))
 """)
 
