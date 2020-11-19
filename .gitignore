@@ -1,0 +1,7 @@
+#log files
+logs/
+# credentials 
+airflow_redshift_user_accessKeys.csv
+__pycache__/
+.ipynb_checkpoints/
+
