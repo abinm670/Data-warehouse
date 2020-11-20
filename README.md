@@ -19,10 +19,10 @@
 
 # Star Scheam and ETL pipline
 
-- python3 create_tables.py
+- python3 create_tables.py:
   - Drop tables if its exists
   - Create tables in AWS Redshift.
-- ## python3 etl.py -->
+- python3 etl.py:
   - Copy the data from s3 and loading the data into the staging tables that resides in Redshift.
   - Insert data into the star scheam from staging tables
 
@@ -31,14 +31,11 @@
 
 # Refrence:
 
-### How to convert epoch to datetime redshift?
+- How to convert epoch to datetime redshift?
+  https://stackoverflow.com/questions/39815425/how-to-convert-epoch-to-datetime-redshift
 
-https://stackoverflow.com/questions/39815425/how-to-convert-epoch-to-datetime-redshift
+- Redshift DISTKEY / SORTKEY
+  https://stackoverflow.com/questions/52885257/redshift-distkey-sortkey
 
-## Redshift DISTKEY / SORTKEY
-
-https://stackoverflow.com/questions/52885257/redshift-distkey-sortkey
-
-## dataset s3 ex.
-
-http://udacity-dend.s3.amazonaws.com/song-data/A/B/N/TRABNQK128F14A2178.json
+- dataset s3 ex.
+  http://udacity-dend.s3.amazonaws.com/song-data/A/B/N/TRABNQK128F14A2178.json
