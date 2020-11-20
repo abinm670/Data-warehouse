@@ -5,6 +5,6 @@ airflow_redshift_user_accessKeys.csv
 __pycache__/
 .ipynb_checkpoints/
 .vscode/
-Sparkify.vuerd.json
+
 
 
