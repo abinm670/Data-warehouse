@@ -6,7 +6,7 @@ config = configparser.ConfigParser()
 config.read('dwh.cfg')
 
 # Role
-ARN = "arn:aws:iam::910225714303:role/myRedshiftRole"
+ARN = ""
 
 
 # DROP TABLES
