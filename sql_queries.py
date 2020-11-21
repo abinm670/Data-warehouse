@@ -42,7 +42,7 @@ registration VARCHAR,
 session_id BIGINT,
 song_name VARCHAR,
 status INTEGER,
-ts VARCHAR,
+ts TIMESTAMP,
 user_agent TEXT,
 user_id VARCHAR,
 PRIMARY KEY(event_id))
@@ -103,7 +103,7 @@ artist_id VARCHAR,
 artist_name VARCHAR, 
 artist_location text,
 artist_latitude DOUBLE PRECISION,
-DOUBLE PRECISION,
+artist_longitude DOUBLE PRECISION,
 PRIMARY KEY (artist_id))
 """)
 
@@ -123,6 +123,7 @@ staging_events_copy = (""" copy staging_events
             from {}
             credentials 'aws_iam_role={}'
             JSON {}
+            TIMEFORMAT 'epochmillisecs'
 """).format(config.get('S3', 'LOG_DATA'), ARN, config.get('S3', 'LOG_JSONPATH'))
 
 staging_songs_copy = (""" copy staging_songs 
@@ -133,9 +134,10 @@ staging_songs_copy = (""" copy staging_songs
 
 
 # FINAL TABLES
+# select timestamp 'epoch' + event.ts/1000 * interval '1 second' start_time,
 songplay_table_insert = ("""
 INSERT INTO songplays (start_time, user_id, level,  song_id, artist_id, session_id, location, user_agent)
-    select timestamp 'epoch' + event.ts/1000 * interval '1 second' start_time,
+    select event.ts,
     event.user_id,
     event.level,
     song.song_id,
