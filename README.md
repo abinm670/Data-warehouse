@@ -9,13 +9,11 @@
 - Load the data to the star schema by using the AWS copy command from the stanging tables.
 - Create Virtual private cloud(VPC) for external access to the schema
 
-# Project Files:
-
-![Alt text](project_pic/project_structure.png)
-
-# Schema
-
-![Alt text](project_pic/Dev_schema.png)
+## Technohlgy:
+* AWS S3
+* AWS Redshift
+* Python3
+* psql
 
 # Star Scheam and ETL pipline
 
@@ -28,6 +26,14 @@
 
 * ## dwh.cfg
   - Has aws account/cluster/dataset information
+
+# Project Files:
+
+![Alt text](project_pic/project_structure.png)
+
+# Schema
+
+![Alt text](project_pic/Dev_schema.png)
 
 # Refrence:
 
