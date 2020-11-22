@@ -1,4 +1,4 @@
-# Data Warehousing Project3
+# Data Warehousing:
 
 #### Sparkify start-up company has log file for customer activity, that is resides in Amazon cloud storage S3, in a directory of JSON. The company would like to know which songs thier clients are listening too.
 
